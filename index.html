@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>what's my weather?</title>
+  </head>
+
+  <div class="container">
+    <body>
+      <h1>What's my Weather?</h1>
+
+      <div class="panel">
+        <div class="row">
+          <div class="col">
+            <button class="current-button" id="current-location">
+              Current Location
+            </button>
+            <form id="search-form">
+              <input
+                type="text"
+                placeholder="🔍"
+                class="form-control search-bar"
+                autocomplete="off"
+                autofocus="on"
+                id="search-input"
+              />
+              <input
+                type="submit"
+                class="form-control search-button"
+                value="search"
+                id="search-button"
+              />
+            </form>
+
+            <div class="card current-city" style="width: 18rem">
+              <div class="card-body">
+                <p class="card-text" id="city">London</p>
+              </div>
+            </div>
+
+            <div class="card current-temp" style="width: 18rem">
+              <div class="card-body">
+                <p class="card-text" id="current-temp">21℃</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <p class="visuals-placeholder">⛅</p>
+          </div>
+
+          <div class="col">
+            <div class="buttons">
+              <button class="btn-celcius" id="btn-celcius">℃</button>
+              <button class="btn-farenheit" id="btn-farenheit">℉</button>
+            </div>
+
+            <div class="card high-low" style="width: 18rem">
+              <div class="card-body">
+                <p class="card-text" id="min-max">H: 22℃ / L: 14℃</p>
+              </div>
+            </div>
+
+            <div class="card sunrise" style="width: 18rem">
+              <div class="card-body">
+                <p class="card-text" id="sunrise">Sunrise: 06:16</p>
+              </div>
+            </div>
+
+            <div class="card sunset" style="width: 18rem">
+              <div class="card-body">
+                <p class="card-text" id="sunset">Sunset: 20:32</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast">
+          <table>
+            <tbody>
+              <tr>
+                <td>21℃ / 14℃ <br />Sun</td>
+                <td>22℃ / 14℃ <br />Mon</td>
+                <td>21℃ / 13℃ <br />Tue</td>
+                <td>20℃ / 14℃ <br />Wed</td>
+                <td>21℃ / 14℃ <br />Thu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <footer>This page was built by Sophie Bradley</footer>
+      <script src="src/script.js"></script>
+    </body>
+  </div>
+</html>
